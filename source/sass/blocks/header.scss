@@ -1,0 +1,136 @@
+.header {
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.header__wrapper {
+  padding: 0;
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: $yellow;
+  position: relative;
+}
+
+.header__container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+
+  &--upper {
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+}
+
+.header__input {
+  padding: 7px;
+  padding-left: 33px;
+  border: none;
+  background-color: $yellow;
+  font-family: 'OpenSansLight', sans-serif;
+  font-size: 15px;
+  background-image: url('../img/search.svg');
+  background-repeat: no-repeat;
+  background-position: 9px 9px;
+
+  &:focus {
+    background-color: $white;
+  }
+}
+
+.header__menu {
+  padding: 0;
+  margin-left: auto;
+}
+
+.header__link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: $black;
+  font-family: 'OpenSansLight', sans-serif;
+  padding-left: 50px;
+  position: relative;
+
+  &--user {
+    background-image: url('../img/user.svg');
+    background-repeat: no-repeat;
+    background-position: left 25px top 5px;
+  }
+
+  &--compare {
+    background-image: url('../img/compare.svg');
+    background-repeat: no-repeat;
+    background-position: left 30px top 6px;
+  }
+
+  &--basket {
+    background-image: url('../img/cart.svg');
+    background-repeat: no-repeat;
+    background-position: left 25px top 5px;
+  }
+}
+
+.header__catalog {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: $black;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  padding: 0;
+  flex-basis: 50%;
+  margin-left: auto;
+}
+
+.header__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__item {
+  margin: 0;
+  padding: 0;
+
+  &--guarantee {
+    padding-left: 60px;
+  }
+
+  &--contacts {
+    margin-left: auto;
+  }
+}
+
+.header__choice {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $black;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  text-transform: uppercase;
+}

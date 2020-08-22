@@ -1,0 +1,158 @@
+.filters {
+  margin: 0;
+  padding: 0;
+  background-color: $light-grey;
+}
+
+.filters__form {
+  margin: 0;
+  padding: 0;
+}
+
+.filters__title {
+  margin: 0;
+  padding: 0;
+  padding-left: 200px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  background-color: $font-grey;
+  text-transform: uppercase;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.filters__field {
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 200px;
+  padding-right: 170px;
+
+  &--bluetooth {
+    padding-bottom: 25px;
+  }
+}
+
+.filters__type {
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  padding-top: 15px;
+
+  &--price {
+    padding-bottom: 20px;
+  }
+
+  &--color {
+    padding-bottom: 20px;
+  }
+
+  &--bluetooth{
+    padding-bottom: 20px;
+  }
+}
+
+.filters__color {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__bluetooth {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filters__item {
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.filters__option {
+  cursor: pointer;
+}
+
+.filters__indicator {
+  display: block;
+  content: "";
+  position: absolute;
+  outline: 0 !important;
+
+  &--color {
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border: 2px solid $black;
+    border-radius: 3px;
+  }
+
+  &--bluetooth {
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    border: 2px solid $black;
+    border-radius: 50%;
+  }
+}
+
+.filters__checkbox:checked + .filters__indicator--color {
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 5px;
+    width: 21px;
+    height: 3px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 1px;
+    width: 10px;
+    height: 3px;
+    background-color: $black;
+    transform: rotate(45deg);
+  }  
+}
+
+.filters__radio:checked + .filters__indicator--bluetooth::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: $black;
+    border-radius: 50%;
+}
+
+.filters__choice {
+  font-family: 'OpenSansLight', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 2px;
+}
+
+.filters__results {
+  margin: 0;
+  padding: 0;
+  padding-left: 200px;
+  padding-right: 150px;
+}

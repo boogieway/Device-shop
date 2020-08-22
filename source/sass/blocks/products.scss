@@ -1,0 +1,172 @@
+// блок с карточками - это сумма карточек + расстояние между ними + отрицательный маржин слева
+// у карточек - одинаковый маржин слева
+
+.products {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.products__container {
+  margin: 0;
+  padding: 0;
+}
+
+.products__range {
+  margin: 0;
+  padding: 0;
+  padding-right: 140px;
+  background-color: $light-grey;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 73px;
+  text-transform: uppercase;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.products__option {
+  margin: 0p;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 35px;
+  text-decoration: none;
+  font-family: 'OpenSansLight', sans-serif;
+  font-size: 14px;
+  color: $black;
+
+  &--up {
+    margin-left: auto;
+  }
+}
+
+.products__showroom {
+  margin: 0;
+  padding: 0;
+  padding-left: 73px;
+  padding-right: 140px;
+  padding-top: 73px;
+}
+
+.products__list {
+  width: 800px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+
+.products__item {
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.products__image {
+  margin: 0;
+  padding: 0;
+}
+
+.products__description {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.products__name {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: $black;
+  flex-basis: 64%;
+}
+
+.products__price {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: $font-grey;
+}
+
+.products__pagination {
+  margin: 0;
+  padding: 0;
+  padding-left: 73px;
+  padding-right: 140px;
+  padding-bottom: 80px;
+}
+
+.products__catalog {
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: $light-grey;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__previous {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  flex-basis: 40%;
+}
+
+.products__pages {
+  margin: 0;
+  padding: 0;
+}
+
+.products__number {
+  margin: 0;
+  padding: 0;
+  padding-left: 27px;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+}
+
+.products__next {
+  margin: 0;
+  padding: 0;
+  font-family: 'GilroyExtraBold', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  margin-left: auto;
+}
+
