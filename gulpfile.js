@@ -16,7 +16,34 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var htmlmin = require("gulp-htmlmin");
+var webpack = require('webpack-stream')
 
+let isDev = true
+let isProd = !isDev
+
+function js() {
+  return gulp.src('./source/js/*')
+    .pipe(webpack({
+      output: {
+        filename: 'bundle.js'
+      },
+      module: {
+        rules: [
+          {
+            test: /\js$/,
+            include: __dirname + './source',
+            exclude: '/node_modules/',
+            use: ["babel-loader"]
+          }
+        ]
+      },
+      mode: isDev ? 'development' : 'production'
+    }))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(server.stream())
+}
+
+gulp.task('js', js)
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -33,6 +60,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -43,6 +71,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
+  gulp.watch("source/js/*", gulp.series("js"));
   gulp.watch("source/img/icon-sprite-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh")).on("change", server.reload);
 });
@@ -104,5 +133,5 @@ gulp.task("clean", function () {
 return del("build")
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "js", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

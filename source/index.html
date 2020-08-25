@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
+
 <body>
   <header class="header">
     <div class="header__wrapper">
@@ -32,8 +35,8 @@
             <li class="header__item header__item--contacts"><a href="#" class="header__choice">контакты</a></li>
           </ul>
         </nav>
-      </div> 
-    </div> 
+      </div>
+    </div>
   </header>
   <main>
     <div class="breadcrumbs">
@@ -42,7 +45,8 @@
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
           <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Каталог товаров</a></li>
-          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--current">Моноподы для селфи</a></li>
+          <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--current">Моноподы для
+              селфи</a></li>
         </ul>
       </div>
     </div>
@@ -50,9 +54,11 @@
       <section class="filters">
         <form action="#" method="get" class="filters__form">
           <h2 class="filters__title">фильтр:</h2>
-          <fieldset class="filters__field">
+          <fieldset class="filters__field filters__field--price">
             <legend class="filters__type filters__type--price">Стоимость</legend>
-            <div class="filters__price"></div>
+            <div class="filters__price">
+              <div class="filters__range"></div>
+            </div>
           </fieldset class="filters__field">
           <fieldset class="filters__field">
             <legend class="filters__type filters__type--color">Цвет</legend>
@@ -136,7 +142,8 @@
             <ul class="products__list">
               <li class="products__item">
                 <div class="products__image">
-                  <img src="./img/item-1.jpg" class="products__photo" width="360" height="380" alt="Изображение товара"></img>
+                  <img src="./img/item-1.jpg" class="products__photo" width="360" height="380"
+                    alt="Изображение товара"></img>
                 </div>
                 <div class="products__description">
                   <span class="products__name">Любительская селфи-палка</span>
@@ -145,7 +152,8 @@
               </li>
               <li class="products__item">
                 <div class="products__image">
-                  <img src="./img/item-2.jpg" class="products__photo" width="360" height="380" alt="Изображение товара"></img>
+                  <img src="./img/item-2.jpg" class="products__photo" width="360" height="380"
+                    alt="Изображение товара"></img>
                 </div>
                 <div class="products__description">
                   <span class="products__name">Профессиональная селфи-палка </span>
@@ -154,7 +162,8 @@
               </li>
               <li class="products__item">
                 <div class="products__image">
-                  <img src="./img/item-3.jpg" class="products__photo" width="360" height="380" alt="Изображение товара"></img>
+                  <img src="./img/item-3.jpg" class="products__photo" width="360" height="380"
+                    alt="Изображение товара"></img>
                 </div>
                 <div class="products__description">
                   <span class="products__name">Непотопляемая селфи-палка</span>
@@ -163,7 +172,8 @@
               </li>
               <li class="products__item">
                 <div class="products__image">
-                  <img src="./img/item-4.jpg" class="products__photo" width="360" height="380" alt="Изображение товара"></img>
+                  <img src="./img/item-4.jpg" class="products__photo" width="360" height="380"
+                    alt="Изображение товара"></img>
                 </div>
                 <div class="products__description">
                   <span class="products__name">Селфи-палка «Следуй за мной»</span>
@@ -235,6 +245,29 @@
       </span>
     </div>
   </footer>
-  
+  <!-- <script>
+    $(document).ready(function(){
+      var superSlider = function(){
+            range = $('.filters__controller'),
+            value = $('.filters__value');
+            $('.filters__price').each(function(){
+            $('.filters__value').each(function(){
+                var value = $(this).prev().attr('value');
+                var max = $(this).prev().attr('max');
+                $(this).html(value);
+            });
+            range.on('input', function(){
+                $(this).next(value).html(this.value);
+            });
+        });
+    };
+    superSlider();
+    });
+    </script> -->
+    <script src="./js/bundle.js"></script>
+
+
+
 </body>
+
 </html>

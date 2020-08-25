@@ -4,8 +4,10 @@
   "private": true,
   "description": "Личный проект Pink",
   "devDependencies": {
+    "@babel/preset-env": "^7.11.0",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
+    "babel-loader": "^8.1.0",
     "browser-sync": "2.26.x",
     "del": "^5.0.0",
     "gulp": "4.0.x",
@@ -20,9 +22,13 @@
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
+    "nouislider": "^14.6.1",
     "posthtml-include": "^1.2.0",
     "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^5.2.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
